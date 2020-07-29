@@ -10,7 +10,7 @@ module "aws_es" {
   cluster_config_dedicated_master_type    =  "${var.master_instance_type}"
   cluster_config_instance_type            = "${var.instance_type}"
   cluster_config_zone_awareness_enabled   = "true"
-  cluster_config_availability_zone_count  = "3"
+  cluster_config_availability_zone_count  = "2"
 
   ebs_options_volume_size = "${var.volume_size}"
 
