@@ -24,6 +24,12 @@ module "aws_es" {
     "rest.action.multi.allow_explicit_index" = "true"
   }
   
+  advanced_security_options = {
+    "internal_user_database_enabled" = "true"
+    "master_user_name" = "test123"
+    "master_user_password" = "Testing@123"
+  }
+  
 vpc_options = {
     subnet_ids = [var.subnetid_1, var.subnetid_2]
     security_group_ids = [var.security_group_id]
