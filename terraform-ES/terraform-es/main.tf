@@ -15,8 +15,10 @@ resource "aws_elasticsearch_domain" "es_domain" {
   advanced_security_options {
     enabled = "true"
     internal_user_database_enabled = "true"
+    master_user_options {
     master_user_name = "test123"
     master_user_password = "Testing@123"
+      }
   }
   
   # ebs_options
