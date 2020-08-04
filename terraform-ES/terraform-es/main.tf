@@ -12,7 +12,7 @@ resource "aws_elasticsearch_domain" "es_domain" {
   advanced_options = var.advanced_options == null ? {} : var.advanced_options
  
 
-  advanced_security_options = {
+  advanced_security_options {
     internal_user_database_enabled = "true"
     master_user_name = "test123"
     master_user_password = "Testing@123"
