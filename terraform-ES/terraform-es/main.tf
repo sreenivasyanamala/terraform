@@ -12,7 +12,7 @@ resource "aws_elasticsearch_domain" "es_domain" {
   advanced_options = var.advanced_options == null ? {} : var.advanced_options
  
 
-  advanced_security_options {
+  fine_grained_options {
     enabled = true
     internal_user_database_enabled = true
     
