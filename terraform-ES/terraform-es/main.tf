@@ -10,6 +10,7 @@ resource "aws_elasticsearch_domain" "es_domain" {
 
   # advanced_options
   advanced_options = var.advanced_options == null ? {} : var.advanced_options
+  advanced_security_options = var.advanced_security_options == null ? {} : var.advanced_security_options
 
   # ebs_options
   dynamic "ebs_options" {
